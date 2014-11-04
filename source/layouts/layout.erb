@@ -8,12 +8,16 @@
     
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
-    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <%= stylesheet_link_tag "style" %>
-    <%= javascript_include_tag  "all" %>
+
   </head>
   
   <body class="<%= page_classes %>">
     <%= yield %>
   </body>
+
+  <%= javascript_include_tag  "all" %>
 </html>
